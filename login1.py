@@ -46,7 +46,7 @@ mysql = MySQL(app)
 #         username = request.form['username']
 #         password = request.form['password']
 #         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-#         cursor.execute('SELECT * FROM Users WHERE username = % s AND password = % s', (username, password, ))
+#         cursor.execute('SELECT * FROM users WHERE username = % s AND password = % s', (username, password, ))
 #         user = cursor.fetchone()
 #         if user:
 #
