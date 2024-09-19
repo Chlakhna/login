@@ -4,6 +4,8 @@ import MySQLdb.cursors
 import re
 from dotenv import load_dotenv
 
+load_dotenv()
+
 app = Flask(__name__)
 app.secret_key = 'b1dcf804bcada8cdf9300f13fc3e7d7e'  # Required for session management
 
