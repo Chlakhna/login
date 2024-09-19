@@ -25,11 +25,17 @@ app.secret_key = 'b1dcf804bcada8cdf9300f13fc3e7d7e'  # Required for session mana
 # app.secret_key = 'secret'  # Replace with your actual secret key
 
 # Access GitHub secrets directly as environment variables
-app.config['MYSQL_HOST'] = app.config.get("MYSQL_HOST")  # Accessed automatically in the environment
-app.config['MYSQL_USER'] = app.config.get("MYSQL_USER")
-app.config['MYSQL_PASSWORD'] = app.config.get("MYSQL_PASSWORD")
-app.config['MYSQL_DB'] = app.config.get("MYSQL_DB")
-app.config['MYSQL_PORT'] = app.config.get("MYSQL_PORT")
+# app.config['MYSQL_HOST'] = app.config.get("MYSQL_HOST")  # Accessed automatically in the environment
+# app.config['MYSQL_USER'] = app.config.get("MYSQL_USER")
+# app.config['MYSQL_PASSWORD'] = app.config.get("MYSQL_PASSWORD")
+# app.config['MYSQL_DB'] = app.config.get("MYSQL_DB")
+# app.config['MYSQL_PORT'] = app.config.get("MYSQL_PORT")
+app.config['MYSQL_HOST'] = 'mysql-2b9c8eba-chlakhna702-5683.h.aivencloud.com'  # Update this with your secret retrieval method
+app.config['MYSQL_USER'] = 'avnadmin'  # Update this with your secret retrieval method
+app.config['MYSQL_PASSWORD'] = 'AVNS_EMM0l9B433aCexcaKkt'  # Update this with your secret retrieval method
+app.config['MYSQL_DB'] = 'login'  # Update this with your secret retrieval method
+app.config['MYSQL_PORT'] = 10605  # Update this with your secret retrieval method
+
 mysql = MySQL(app)
 
 @app.route('/')
