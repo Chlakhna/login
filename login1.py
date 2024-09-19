@@ -2,7 +2,7 @@ from flask import Flask, request, session, redirect, url_for, render_template
 from flask_mysqldb import MySQL
 import MySQLdb.cursors
 import re
-
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 app.secret_key = 'b1dcf804bcada8cdf9300f13fc3e7d7e'  # Required for session management
@@ -19,7 +19,12 @@ app.secret_key = 'b1dcf804bcada8cdf9300f13fc3e7d7e'  # Required for session mana
 # app.config['MYSQL_PASSWORD'] = os.getenv('MYSQL_PASSWORD')
 # app.config['MYSQL_DB'] = os.getenv('MYSQL_DB')
 # app.config['MYSQL_PORT'] = int(os.getenv('MYSQL_PORT'))      
-app.config.from_prefixed_env() 
+# app.config.from_prefixed_env() 
+app.config['MYSQL_HOST'] = get_env_var('MYSQL_HOST')
+app.config['MYSQL_USER'] = get_env_var('MYSQL_USER')
+app.config['MYSQL_PASSWORD'] = get_env_var('MYSQL_PASSWORD')
+app.config['MYSQL_DB'] = get_env_var('MYSQL_DB')
+app.config['MYSQL_PORT'] = int(get_env_var('MYSQL_PORT'))
 mysql = MySQL(app)
 
 @app.route('/')
