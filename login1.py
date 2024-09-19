@@ -11,11 +11,13 @@ app.secret_key = 'b1dcf804bcada8cdf9300f13fc3e7d7e'  # Required for session mana
 # app.config['MYSQL_USER'] = 'root'
 # app.config['MYSQL_PASSWORD'] = ''
 # app.config['MYSQL_DB'] = 'dpa'
-app.config['MYSQL_HOST'] = 'mysql-2b9c8eba-chlakhna702-5683.h.aivencloud.com'
-app.config['MYSQL_USER'] = 'avnadmin'                               
-app.config['MYSQL_PASSWORD'] = 'AVNS_EMM0l9B433aCexcaKkt'                         
-app.config['MYSQL_DB'] = 'defaultdb'     
-app.config['MYSQL_PORT'] = 10605       
+
+# Configure MySQL using environment variables
+app.config['MYSQL_HOST'] = os.getenv('MYSQL_HOST')
+app.config['MYSQL_USER'] = os.getenv('MYSQL_USER')
+app.config['MYSQL_PASSWORD'] = os.getenv('MYSQL_PASSWORD')
+app.config['MYSQL_DB'] = os.getenv('MYSQL_DB')
+app.config['MYSQL_PORT'] = int(os.getenv('MYSQL_PORT'))       
 mysql = MySQL(app)
 
 @app.route('/')
