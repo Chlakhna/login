@@ -6,12 +6,15 @@ import re
 app = Flask(__name__)
 app.secret_key = 'b1dcf804bcada8cdf9300f13fc3e7d7e'  # Required for session management
 
-# MySQL configurations
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'dpa'
-
+# # MySQL configurations
+# app.config['MYSQL_HOST'] = 'localhost'
+# app.config['MYSQL_USER'] = 'root'
+# app.config['MYSQL_PASSWORD'] = ''
+# app.config['MYSQL_DB'] = 'dpa'
+app.config['MYSQL_HOST'] = 'buildsbyte-phpmyadmin.analyticalx.org'  # Remote host URL
+app.config['MYSQL_USER'] = 'intern2'                                 # Username
+app.config['MYSQL_PASSWORD'] = 'Dcr@111111'                          # Password 
+app.config['MYSQL_DB'] = 'intern2'         
 mysql = MySQL(app)
 
 @app.route('/')
