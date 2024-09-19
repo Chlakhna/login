@@ -71,7 +71,7 @@ def login():
 
         # Query to check for username and password in the database
         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        cursor.execute('SELECT * FROM Users WHERE username = %s AND password = %s', (username, password))
+        cursor.execute('SELECT * FROM users WHERE username = %s AND password = %s', (username, password))
         user = cursor.fetchone()
 
         if user:
@@ -110,7 +110,7 @@ def register():
         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
 
         # Check if the username already exists
-        cursor.execute('SELECT * FROM Users WHERE username = %s', (username,))
+        cursor.execute('SELECT * FROM users WHERE username = %s', (username,))
         account = cursor.fetchone()
 
         if account:
@@ -119,7 +119,7 @@ def register():
             mesage = 'Please fill out the form!'
         else:
             # Insert the new user into the Users table
-            cursor.execute('INSERT INTO Users (username, password, phone, role, userlevel) VALUES (%s, %s, %s, %s, %s)',
+            cursor.execute('INSERT INTO users (username, password, phone, role, userlevel) VALUES (%s, %s, %s, %s, %s)',
                            (username, password, phone, role, userlevel))
             mysql.connection.commit()
             mesage = 'You have successfully registered!'
