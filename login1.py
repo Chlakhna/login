@@ -22,7 +22,7 @@ app.secret_key = 'b1dcf804bcada8cdf9300f13fc3e7d7e'  # Required for session mana
 # app.config['MYSQL_DB'] = os.getenv('MYSQL_DB')
 # app.config['MYSQL_PORT'] = int(os.getenv('MYSQL_PORT'))      
 # app.config.from_prefixed_env() 
-app.secret_key = 'secret'  # Replace with your actual secret key
+# app.secret_key = 'secret'  # Replace with your actual secret key
 
 # Access GitHub secrets directly as environment variables
 app.config['MYSQL_HOST'] = app.config.get("MYSQL_HOST")  # Accessed automatically in the environment
