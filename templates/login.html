@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link href='https://fonts.googleapis.com/css?family=Khmer' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="form-container">
+            <div class="title">
+                <text>Welcome back!</text>
+            </div>
+            
+            <form action="/login" method="POST">
+                <label for="username">Username</label>&emsp;&emsp;&emsp;
+                <input type="text" name="username" id="username" placeholder="username"><br>
+    
+                <label for="password">Password </label>&emsp;&emsp;&emsp;
+                <input type="text" name="password" id="password" placeholder="password"><br>
+    
+                <!-- <label for="phonenumber">Phone Number</label>&emsp;
+                <input type="text" name="phonenumber" id="phonenumber" placeholder="Your phone number"><br> -->
+                <div class="login">
+                    <a href="{{ url_for('register') }}">
+
+                      <input type="submit" value="Login">
+                    </a>
+                  </div>
+                <div class="register">
+                <input type="submit" value="Register">
+            </div>
+                 <div class="Register">
+                    <text>Not a Member?&emsp13;
+                        <a href="{{ url_for('register') }}">Register</a>
+                    </text>
+                </div> 
+            </form>
+        </div>
+        
+
+    </div>
+
+</body>
+</html>

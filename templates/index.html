@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link href='https://fonts.googleapis.com/css?family=Khmer' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    
+    <div class="form-group">
+        <h1>Registration Form</h1>
+        <form action="" method="POST">
+            <label for="username">Username</label>&emsp;&emsp;&emsp13;
+            <input type="text" id="username" name="username" placeholder=" " required><br><br>
+
+            <label for="password">Password</label>&emsp;
+            <input type="password" id="password" name="password" required><br><br>
+
+            <label for="phone">Phone Number</label>&emsp;&emsp;
+            <input type="phone" id="phone" name="phone" required><br><br>
+
+             <label for="role">Role</label>&emsp;&emsp;&emsp;&emsp13;&emsp13;&emsp13;
+            <input type="role" id="role" name="role" required><br><br>
+
+            <label for="userlevel">User Level</label>&emsp;&emsp;&emsp;&emsp13;
+            <select id="userlevel" name="userlevel" required>
+                <option value=" "> </option>
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+            </select><br><br>
+
+
+
+            <div class="register">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
