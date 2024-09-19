@@ -14,7 +14,8 @@ app.secret_key = 'b1dcf804bcada8cdf9300f13fc3e7d7e'  # Required for session mana
 app.config['MYSQL_HOST'] = 'buildsbyte-phpmyadmin.analyticalx.org'  # Remote host URL
 app.config['MYSQL_USER'] = 'intern2'                                 # Username
 app.config['MYSQL_PASSWORD'] = 'Dcr@111111'                          # Password 
-app.config['MYSQL_DB'] = 'intern2'         
+app.config['MYSQL_DB'] = 'intern2'     
+app.config['MYSQL_PORT'] = 3306      
 mysql = MySQL(app)
 
 @app.route('/')
