@@ -82,7 +82,7 @@ matplotlib==3.9.2
 mccabe==0.6.1
 mdurl==0.1.2
 mkl==2024.2.2
-mkl-service==2.4.0
+mkl-service==2.4.1
 ml-dtypes==0.2.0
 mlxtend==0.22.0
 mpmath==1.2.1
