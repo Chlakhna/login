@@ -4,7 +4,7 @@ import MySQLdb.cursors
 import re
 from dotenv import load_dotenv
 
-load_dotenv()
+
 
 app = Flask(__name__)
 app.secret_key = 'b1dcf804bcada8cdf9300f13fc3e7d7e'  # Required for session management
@@ -22,11 +22,14 @@ app.secret_key = 'b1dcf804bcada8cdf9300f13fc3e7d7e'  # Required for session mana
 # app.config['MYSQL_DB'] = os.getenv('MYSQL_DB')
 # app.config['MYSQL_PORT'] = int(os.getenv('MYSQL_PORT'))      
 # app.config.from_prefixed_env() 
-app.config['MYSQL_HOST'] = get_env_var('MYSQL_HOST')
-app.config['MYSQL_USER'] = get_env_var('MYSQL_USER')
-app.config['MYSQL_PASSWORD'] = get_env_var('MYSQL_PASSWORD')
-app.config['MYSQL_DB'] = get_env_var('MYSQL_DB')
-app.config['MYSQL_PORT'] = int(get_env_var('MYSQL_PORT'))
+app.secret_key = 'secret'  # Replace with your actual secret key
+
+# Access GitHub secrets directly as environment variables
+app.config['MYSQL_HOST'] = app.config.get("MYSQL_HOST")  # Accessed automatically in the environment
+app.config['MYSQL_USER'] = app.config.get("MYSQL_USER")
+app.config['MYSQL_PASSWORD'] = app.config.get("MYSQL_PASSWORD")
+app.config['MYSQL_DB'] = app.config.get("MYSQL_DB")
+app.config['MYSQL_PORT'] = app.config.get("MYSQL_PORT")
 mysql = MySQL(app)
 
 @app.route('/')
