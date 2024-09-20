@@ -83,7 +83,7 @@ def login():
             session['role'] = user['role']
             session['userlevel'] = user['userlevel']
             message = 'Logged in successfully!'
-            return redirect(url_for('edittoken'))  # Redirect to the user profile or other page
+            return redirect(url_for('edit'))  # Redirect to the user profile or other page
         else:
             message = 'Incorrect username or password. Please try again.'
 
