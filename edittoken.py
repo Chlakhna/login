@@ -7,10 +7,15 @@ app = Flask(__name__)
 app.secret_key = 'b1dcf804bcada8cdf9300f13fc3e7d7e'  # Required for session management
 
 # MySQL configurations
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'dpateleg'
+# app.config['MYSQL_HOST'] = 'localhost'
+# app.config['MYSQL_USER'] = 'root'
+# app.config['MYSQL_PASSWORD'] = ''
+# app.config['MYSQL_DB'] = 'dpateleg'
+app.config['MYSQL_HOST'] = 'mysql-2b9c8eba-chlakhna702-5683.h.aivencloud.com'  # Update this with your secret retrieval method
+app.config['MYSQL_USER'] = 'avnadmin'  # Update this with your secret retrieval method
+app.config['MYSQL_PASSWORD'] = 'AVNS_EMM0l9B433aCexcaKkt'  # Update this with your secret retrieval method
+app.config['MYSQL_DB'] = 'dpateleg'  # Update this with your secret retrieval method
+app.config['MYSQL_PORT'] = 10605  # Update this with your secret retrieval method
 
 mysql = MySQL(app)
 
