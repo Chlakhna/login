@@ -1,0 +1,235 @@
+/* General styles */
+body {
+    background-color: #1b0707;
+    margin: 0;
+    height: 655px;
+}
+
+.dashboard {
+    width: 100%;
+    background-color: white;
+    height: 690px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Container styles */
+.dashboard .container {
+    margin-top: 0px;
+    background-color: #eee;
+    height: 665px;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+.dashboard .container .container-logo {
+    display: flex;
+    margin-left: 40px;
+}
+
+.dashboard .container .container-logo .logo {
+    flex: 1;
+}
+
+.dashboard .container .container-logo .logo img {
+    height: 80%;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.dashboard .container .container-logo .text-logo {
+    flex: 2;
+    margin-left: 15px;
+}
+
+.dashboard .container .container-logo .text-logo p,
+.dashboard .container .container-logo .text-logo h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard .container .container-logo .text-logo p {
+    margin-top: 0px;
+    transform: translateY(100%);
+}
+
+.dashboard .container .container-logo .text-logo h4 {
+    margin-top: 20px;
+    font-size: 23px;
+}
+
+/* Menu styles */
+.dashboard .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 5px;
+    text-align: left;
+    left: 50px;
+}
+
+.dashboard .menu ul li {
+    padding: 5px;
+    position: relative;
+    
+}
+
+.dashboard .menu ul li a {
+    display: block;
+    width: 200px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    text-align: left;
+    padding: 4px;
+    
+
+}
+
+.dashboard .menu ul li a:hover {
+    font-family: Palatino Bold;
+    background-color: gray;
+}
+
+/* Dropdown menu styles */
+.dashboard .menu .dropdown {
+    /* font-weight: bold; */
+    position: relative;
+    
+}
+
+.dashboard .menu .dropdown .dropbtn {
+    cursor: pointer;
+    
+}
+
+.dashboard .menu .dropdown-content {
+    margin-left: 30px;
+    display: none;
+    position: absolute;
+    min-width: 100px; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+/* Show the dropdown when the parent li is focused or hovered */
+.dashboard .menu .dropdown:focus-within .dropdown-content,
+.dashboard .menu .dropdown:hover .dropdown-content {
+    display: block;
+
+}
+
+.dashboard .menu .dropdown-content a {/* Force the background to be transparent */
+    color: black !important; /* Ensure the text color is black */
+    padding: 3px 5px;
+    display: block;
+}
+
+.dashboard .menu .dropdown-content a:hover {
+    background-color: transparent !important;
+    color: black !important;
+    text-decoration: underline;
+}
+
+/* Main content styles */
+.dashboard .main2 {
+    background-color: rgba(159, 141, 141, 0.164);
+    height: 655px;
+    padding: 10px;
+    width: 1250px;
+    border-radius: 10px;
+}
+
+.dashboard textarea {
+    margin-right: 5px;
+    height: 400px;
+    width: 360px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.dashboard .main2 .home-form {
+    height: 655px;
+    width: 1250px;
+    text-align:center;
+}
+.dashboard .main2 .home-form h2{
+   margin-right: 1130px;
+   color: rgb(98, 25, 216);
+   font-size: 16px;
+   font-weight:normal;
+   margin-bottom: 70px;
+}
+.dashboard .main2 .home-form h3{
+   color: rgb(14, 12, 16);
+   font-size: 16px;
+   font-weight:normal;
+}
+/* General form styling */
+.dashboard .main2 .home-form form {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Group Styling */
+.dashboard .main2 .home-form .input-group {
+    
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styling */
+.dashboard .main2 .home-form .input-group label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+    text-align: left;
+}
+
+/* Input field styling */
+.dashboard .main2 .home-form .input-group input {
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+/* Focus state for input */
+.dashboard .main2 .home-form .input-group input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Button styling */
+.dashboard .main2 .home-form button {
+    margin-left: 300px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100px;
+    transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
