@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Khmer' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='settings.css') }}">=
+</head>
+<body>
+<div class="dashboard">
+    <table border="0">
+        <tr align="left">
+            <td>
+                <div class="container">
+                    <div class="container-logo">
+                        <div class="logo">
+                            <img src="https://dcxsea.com/asset/images/logo/LOGO_DCX.png" alt="">
+                        </div>
+                        <div class="text-logo">
+                            <p>G4</p>
+                            <h4>Cambodia</h4>
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#">Dashboard</a></li>
+                            <!-- <li></li><iframe src="https://eu.kobotoolbox.org/accounts/login/" title="description"></iframe></li> -->
+                            <li><a href="https://eu.kobotoolbox.org/accounts/login/" target="reportFrame">Data</a></li>
+                            <li><a href="#">Report</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropbtn">Settings</a>
+                                <div class="dropdown-content">
+                                    <a href="#">Telegram</a>
+                                    <a href="#">User Account</a>
+                                </div>
+                            </li>
+                            <li><a href="">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </td>
+            <td align="right" valign="top">
+                <div class="main2">
+                    <div class="home-form">
+                        <h2>Telegram</h2>
+                        <h3 style="font-family: Times New Roman; margin-bottom: 20px; font-size:24px;font-weight: bold;">Telegram Configuration</h3>
+                        <form action="/edit" method="POST">
+                            <div class="input-group">
+                                <label for="new_token">Telegram Token:</label>
+                                <input type="text" id="new_token" name="new_token" placeholder=" ">
+                            </div>
+                            <div class="input-group">
+                                <label for="new_groupid">Telegram ID:</label>
+                                <input type="text" id="new_groupid" name="new_groupid" placeholder=" ">
+                            </div>
+                            <button type="submit" value="Update">Save</button>
+                        </form>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
